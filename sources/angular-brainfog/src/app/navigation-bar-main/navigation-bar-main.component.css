@@ -1,0 +1,25 @@
+
+.navigationBarContainer{
+  display: grid;
+  grid-template-columns: [first-column] auto [second-column] auto;
+  justify-items: start;
+  align-items: center;
+}
+
+.navigationBarContainer__navigationLinkContainer {
+  grid-column-start: first-column;
+  grid-column-end: first-column;
+}
+
+.navigationBarContainer__navigationLinkContainer > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navigationBarContainer__titleContainer {
+  grid-column-start: second-column;
+  grid-column-end: second-column;
+}
+

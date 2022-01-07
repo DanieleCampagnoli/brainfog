@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+/*css custom properties (variables)*/
+:root {
+  /*---colors---*/
+  /*color of the navigation bar and the post headers*/
+  --brainfog__header--color: #0D0D0D;
+  /*dark color of the text*/
+  --brainfog__text--darkcolor:#6C808B;
+  /*white color of the text*/
+  --brainfog__text--lightcolor:#FFFFFF;
+  /*background color of the application*/
+  --brainfog__background--color:#262626;
+}
+
+/* classes for the colors */
+.font--dark{
+  color: var(--brainfog__text--darkcolor);
+}
+.font--light{
+  color: var(--brainfog__text--lightcolor);
+}
+
+.header--color {
+  background-color: var(--brainfog__header--color);
+}
+/*background color of the entire app*/
+body {
+  background-color: var(--brainfog__background--color);
+  margin: 0px;
+}
+
+/*fonts*/
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("./assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+.font__heading--large {
+  font-family: "PlayfairDisplay-Regular";
+  font-size: 40px;
+}
+.font__heading--medium {
+  font-family: "PlayfairDisplay-Regular";
+  font-size: 32px;
+}
+.font__heading--small {
+  font-family: "PlayfairDisplay-Regular";
+  font-size: 24px;
+}
+.font__body {
+  font-family: "PlayfairDisplay-Regular";
+  font-size: 16px;
+}
+
