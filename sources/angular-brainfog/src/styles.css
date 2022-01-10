@@ -57,3 +57,46 @@ body {
   font-size: 16px;
 }
 
+.post {
+  margin: 10px;
+}
+
+.post--small{
+  width: 300px;
+  height: 340px;
+}
+
+.post--medium{
+  width: 1000px;
+  height: 430px;
+}
+
+.post__header{
+ display: grid;
+ grid-template-columns: [first-column] 100%;
+ grid-template-rows: [first-row] 50% [second-row] 50%;
+ justify-items: center;
+ align-items: center;
+ width: 100%;
+ height: 23%;
+}
+
+.post__title{
+ grid-column-start: first-column;
+ grid-column-end: first-column;
+ grid-row-start: second-row;
+ grid-row-end:second-row;
+}
+
+.post__date{
+ grid-column-start: first-column;
+ grid-column-end: first-column;
+ grid-row-start: first-row;
+ grid-row-end:first-row;
+ justify-self: end;
+}
+/* this css class limit the size of the post header. */
+.post__content{
+  width: 100%;
+  height: 77%;
+}

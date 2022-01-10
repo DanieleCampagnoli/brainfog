@@ -1,0 +1,9 @@
+<div class="postListContainer ">
+   <div *ngFor="let post of posts" class="post post--small header--color font__heading--small font--dark" (click)="postClicked(post);">
+    <div class="post__header">
+        <p class="post__date">2022</p>
+        <p class="post__title">{{post.title}}</p>
+    </div>
+    <img src={{post.imageUrl}} class="post__content "/>
+   </div>
+</div>
