@@ -19,6 +19,6 @@ export class PostListComponent implements OnInit {
   }
 
   postClicked(post:BrainfogPost): void{
-    this.router.navigateByUrl(BrainfogRoutes.POST);
+    this.router.navigate([post.postRoute,post.id]);
   }
 }

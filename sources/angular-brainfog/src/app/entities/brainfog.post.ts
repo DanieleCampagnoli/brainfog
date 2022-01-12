@@ -1,5 +1,7 @@
 
-
+/**
+ * this entity represents a blog post.
+ */
 export class BrainfogPost {
  /**
   * a sort of buiness key of the post.
@@ -18,14 +20,21 @@ export class BrainfogPost {
   */
  public createDate: Date;
  /**
+  *  the react rout url of the post
+  * */
+ public postRoute: string;
+
+ /**
   * create a new post.
   */
  public constructor (id: number, title: String,
    imageUrl: String,
-   createDate: Date){
+   createDate: Date,
+   postRoute: string){
    this.id=id;
    this.title=title;
    this.imageUrl=imageUrl;
    this.createDate=createDate;
+   this.postRoute=postRoute;
  }
 };
