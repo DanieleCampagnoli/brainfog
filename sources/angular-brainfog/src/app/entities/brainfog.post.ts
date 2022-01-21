@@ -20,7 +20,7 @@ export class BrainfogPost {
   */
  public createDate: Date;
  /**
-  *  the react rout url of the post
+  *  the react route url of the post
   * */
  public postRoute: string;
 
