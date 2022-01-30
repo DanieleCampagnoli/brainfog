@@ -9,10 +9,10 @@ services:
     ports:
       - 3306:3306
     environment: 
-        MYSQL_DATABASE: brainfog_db
-        MYSQL_USER: mysql
-        MYSQL_PASSWORD: mysql
-        MYSQL_ROOT_PASSWORD: supersecret  
+        MYSQL_DATABASE: ${BRAINFOG_MYSQL_DATABASE}
+        MYSQL_USER: ${BRAINFOG_MYSQL_USER}
+        MYSQL_PASSWORD: ${BRAINFOG_MYSQL_USER_PASSWORD}
+        MYSQL_ROOT_PASSWORD: ${BRAINFOG_MYSQL_ROOT_PASSWORD}  
     volumes:
       - brainfog_mysql_db_volume:/var/lib/mysql
   rest:
@@ -24,7 +24,10 @@ services:
     ports:
       - 8080:8080
     environment:
-      MYSQL_HOST: db      
+      MYSQL_HOST: db 
+      BRAINFOG_MYSQL_DATABASE: ${BRAINFOG_MYSQL_DATABASE}
+      BRAINFOG_MYSQL_USER: ${BRAINFOG_MYSQL_USER}
+      BRAINFOG_MYSQL_USER_PASSWORD: ${BRAINFOG_MYSQL_USER_PASSWORD}   
     depends_on:
       - db
   ui:

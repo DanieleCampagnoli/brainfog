@@ -22,10 +22,18 @@ public class BrainFogVoronoiServiceImplTest {
     }
 
     @Test
-    public void testWindowSiteIteration() throws IOException{
+    public void testKDTreeIteration() throws IOException{
         URL originalImageUrl=this.getClass().getClassLoader().getResource("20200709_111353.jpg");
         BufferedImage originalImage= ImageIO.read(originalImageUrl);
         BufferedImage imageTiling=testee.executeImageTilingWithKDTree(originalImage,10000,false);
         ImageIO.write(imageTiling, "png", new File("./test-output/20200709_111353_testWindowSiteIteration.png"));
+    }
+
+    @Test
+    public void testNasaImage() throws IOException{
+        URL originalImageUrl=this.getClass().getClassLoader().getResource("pia19836-ngc2174.jpg");
+        BufferedImage originalImage= ImageIO.read(originalImageUrl);
+        BufferedImage imageTiling=testee.executeImageTilingWithKDTree(originalImage,10000,false);
+        ImageIO.write(imageTiling, "png", new File("./test-output/pia19836-ngc2174_testNasaImage.png"));
     }
 }
