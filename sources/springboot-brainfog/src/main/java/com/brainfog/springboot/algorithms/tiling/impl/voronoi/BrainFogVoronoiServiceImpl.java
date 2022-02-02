@@ -36,11 +36,13 @@ import com.brainfog.springboot.algorithms.tiling.api.voronoi.BrainFogVoronoiServ
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
 /**
  * implementation of the @link{BrainFogVoronoiService}.
  */
+@Service
 public class BrainFogVoronoiServiceImpl implements BrainFogVoronoiService {
 
     Logger logger = LoggerFactory.getLogger(BrainFogVoronoiServiceImpl.class);

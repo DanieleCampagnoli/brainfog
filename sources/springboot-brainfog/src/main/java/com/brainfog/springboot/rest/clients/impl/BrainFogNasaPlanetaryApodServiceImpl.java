@@ -11,6 +11,8 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
+import com.brainfog.springboot.rest.clients.api.BrainFogNasaPlanetaryApodService;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Service
-public class BrainFogNasaPlanetaryApodServiceImpl {
+public class BrainFogNasaPlanetaryApodServiceImpl implements BrainFogNasaPlanetaryApodService {
     private Logger logger = LoggerFactory.getLogger(BrainFogNasaPlanetaryApodServiceImpl.class);
 
     private static final String MEDIA_TYPE = "media_type";
