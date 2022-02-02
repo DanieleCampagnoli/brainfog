@@ -33,7 +33,8 @@ public class BrainFogVoronoiServiceImplTest {
     public void testNasaImage() throws IOException{
         URL originalImageUrl=this.getClass().getClassLoader().getResource("pia19836-ngc2174.jpg");
         BufferedImage originalImage= ImageIO.read(originalImageUrl);
-        BufferedImage imageTiling=testee.executeImageTilingWithKDTree(originalImage,10000,false);
+        int numberOfSites=(originalImage.getWidth()*originalImage.getHeight())/1000;
+        BufferedImage imageTiling=testee.executeImageTilingWithKDTreeWindow(originalImage,numberOfSites,false);
         ImageIO.write(imageTiling, "png", new File("./test-output/pia19836-ngc2174_testNasaImage.png"));
     }
 }

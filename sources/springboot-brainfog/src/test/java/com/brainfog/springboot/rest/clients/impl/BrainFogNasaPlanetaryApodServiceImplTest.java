@@ -25,7 +25,7 @@ public class BrainFogNasaPlanetaryApodServiceImplTest {
      */
     @Test
     public void test() throws IOException{
-       BufferedImage response=testee.call();
+       BufferedImage response=testee.getRandomImage().get();
        LOGGER.info("response {}",response);
        BrainFogVoronoiServiceImpl voronoiService= new BrainFogVoronoiServiceImpl();
        BufferedImage imageTiling=voronoiService.executeImageTilingWithKDTree(response,5000,false);
