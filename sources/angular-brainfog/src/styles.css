@@ -97,6 +97,7 @@ body {
   width: 100%;
   height: 77%;
   background-color: var(--brainfog__text--lightcolor);
+  text-align: center;
 }
 
 
@@ -105,4 +106,8 @@ body {
   grid-template-columns: [first-column] 100%;
   justify-items: center;
   align-items: center;
+ }
+ /* this class can be used for the interactive content of the post (generative art or other dynamic content)*/
+ .post__interactive-content{
+   margin:5em;
  }
