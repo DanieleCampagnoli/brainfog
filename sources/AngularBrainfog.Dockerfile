@@ -1,7 +1,7 @@
 # Stage 1: Compile and Build angular codebase
 
 # Use official node image as the base image
-FROM node:latest as build
+FROM node:16-alpine as build
 
 # Set the working directory
 WORKDIR /usr/local/app
@@ -13,7 +13,9 @@ COPY ./angular-brainfog /usr/local/app/
 RUN npm install
 
 # Generate the build of the application
-RUN npm run build
+# Resolve the build configuration
+ARG brainfog-build-config=production
+RUN npm run build --configuration=${brainfog-build-config}
 
 
 # Stage 2: Serve app with nginx server

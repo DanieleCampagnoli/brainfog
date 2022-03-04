@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   db:
-    image: brainfog_mysql_db 
+    image: itdanielec/brainfog_mysql_db 
     container_name: brainfog_mysql_db
     build:
       context: .
@@ -16,7 +16,7 @@ services:
     volumes:
       - brainfog_mysql_db_volume:/var/lib/mysql
   rest:
-    image: springboot-brainfog
+    image: itdanielec/springboot-brainfog
     container_name: springboot-brainfog
     build:
       context: .
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   ui:
-    image: angular-brainfog
+    image: itdanielec/angular-brainfog
     container_name: angular-brainfog
     build:
       context: .
