@@ -15,18 +15,10 @@ export class PostService {
 
 
   constructor() {
+    this.postNasaApodVoronoi();
+  }
 
-    //dummy posts
-    for(let i=1;i<20;i++){
-       let id=this.getNextPostiId();
-       let title="title";
-       let imageUrl="/assets/images/test1.jpg";
-       let  createDate= new Date("2022-01-07");
-       let postRoute=BrainfogRoutes.POST_BASE_ROUTE;
-       let post= new BrainfogPost(id,title,imageUrl,createDate,postRoute);
-       this.posts.push(post);
-    }
-    //pasa apod voronoi post
+  private postNasaApodVoronoi(){
     let title="Voronoi On Nasa APOD";
     let imageUrl="/assets/images/nasa-apod-voronoi.png";
     let createDate= new Date("2022-01-07");

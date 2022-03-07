@@ -11,7 +11,7 @@
    </div>
    <div class="post__interactive-content">
         <div *ngIf="imageDownloadPending; then pleaseWait else imageDownloadCompleted"></div>
-        <ng-template #pleaseWait> <img src="/assets/icons/pending_white_24dp.png"/></ng-template>
+        <ng-template #pleaseWait><div class="spin"></div></ng-template>
         <ng-template #imageDownloadCompleted> <img [src]="downloadedImage"/> </ng-template>
    </div>
   </div>
