@@ -1,7 +1,8 @@
 
 .navigationBarContainer{
   display: grid;
-  grid-template-columns: [first-column] auto [second-column] auto;
+  grid-template-columns: [first-column] auto;
+  grid-template-rows: [first-row] auto;
   justify-items: start;
   align-items: center;
 }
@@ -9,6 +10,8 @@
 .navigationBarContainer__navigationLinkContainer {
   grid-column-start: first-column;
   grid-column-end: first-column;
+  grid-row: first-row;
+  justify-self: start;
 }
 
 .navigationBarContainer__navigationLinkContainer > * {
@@ -19,7 +22,9 @@
 }
 
 .navigationBarContainer__titleContainer {
-  grid-column-start: second-column;
-  grid-column-end: second-column;
+  grid-column-start: first-column;
+  grid-column-end: first-column;
+  grid-row: first-row;
+  justify-self: center;
 }
 
