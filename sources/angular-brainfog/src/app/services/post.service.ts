@@ -15,7 +15,8 @@ export class PostService {
 
 
   constructor() {
-    this.postNasaApodVoronoi();
+      this.postNasaApodVoronoi();
+
   }
 
   private postNasaApodVoronoi(){
