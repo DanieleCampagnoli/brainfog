@@ -5,5 +5,6 @@ Feel free to copy the entire content for your own porpuses.
 
 List of posts 
 
-1- Nasa APOD Voronoi
+1- Nasa APOD Voronoi.
+
 The page generates a voronoi diagram starting from an image downloaded from the NASA Astronomy Picture of the Day.
