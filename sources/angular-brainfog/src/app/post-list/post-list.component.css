@@ -29,8 +29,8 @@ overflow: hidden;
   top: 0%;
   left: 0%;
   transform: translate3d(0, 0, 0) rotate(0.01deg);
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   background: url("/assets/images/smoke-min.png") center center no-repeat;
   background-size: cover;
   z-index: -10;
@@ -42,22 +42,35 @@ overflow: hidden;
   bottom: 0%;
   right: 0%;
   transform: translate3d(0, 0, 0) rotate(0.01deg);
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   background: url("/assets/images/smoke-min.png") center center no-repeat;
   background-size: cover;
   z-index: -10;
   animation: smokebg 20s infinite alternate;
   }
 
+  .brainfog-smoke2{
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate3d(0, 0, 0) rotate(0.01deg);
+    width: 70%;
+    height: 70%;
+    background: url("/assets/images/smoke-min.png") center center no-repeat;
+    background-size: cover;
+    z-index: -10;
+    animation: smokebg 20s infinite alternate-reverse;
+  }
+
 @keyframes smokebg {
   from {
-      width: 50%;
-      height: 50%;
+      width: 70%;
+      height: 70%;
   }
 
 to {
       width: 100%;
       height: 100%;
-}
+ }
 }

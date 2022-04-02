@@ -15,6 +15,7 @@ export class NasaApodVoronoiComponent implements OnInit {
   post: BrainfogPost;
 
   imageDownloadPending:boolean;
+  imageFullScreen:boolean;
 
   downloadedImage?:string | ArrayBuffer | null;
 
@@ -23,6 +24,7 @@ export class NasaApodVoronoiComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.post=this.postService.getPost(id);
     this.imageDownloadPending=true;
+    this.imageFullScreen=false;
 
 
     imageService.downloadImage(apiUrlsService.getNasaAPODVoronoiApiUrl()).subscribe((image) => {
@@ -33,6 +35,10 @@ export class NasaApodVoronoiComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  changeDownloadedImageSize():void{
+    this.imageFullScreen=!this.imageFullScreen;
   }
 
 }

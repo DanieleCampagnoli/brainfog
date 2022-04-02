@@ -135,3 +135,24 @@ body {
   will-change: transform;
 }
 /*END:css classes to create a spinner*/
+
+/**remove bullets from a list **/
+.ul__no-bullets {
+  list-style-type: none; /* Remove bullets */
+}
+
+
+.image__fullpage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9999;
+  width: auto;
+  height: 100%;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}

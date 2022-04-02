@@ -1,16 +1,24 @@
 <div class="post__container--master-detail ">
   <div  class="post post--medium header--color font__heading--small font--dark" >
     <div class="post__header">
-        <p class="post__date">2022</p>
+        <p class="post__date">{{post.createDate | date:'YYYY'}}</p>
         <p class="post__title">{{post.title}}</p>
     </div>
     <div class="post__content font__body ">
       <p>The page generates a voronoi diagram starting from an image downloaded from the NASA Astronomy Picture of the Day.</p>
+      <ul class="ul__no-bullets">
+        <li><a href="https://en.wikipedia.org/wiki/Voronoi_diagram">Voroni Diagram Wikipedia Page</a></li>
+        <li><a href="https://apod.nasa.gov/apod">Nasa APOD Page</a></li>
+      </ul>
+      <p>Click the image to see a full screen version.</p>
     </div>
    </div>
    <div class="post__interactive-content">
         <div *ngIf="imageDownloadPending; then pleaseWait else imageDownloadCompleted"></div>
         <ng-template #pleaseWait><div class="spin"></div></ng-template>
-        <ng-template #imageDownloadCompleted> <img [src]="downloadedImage"/> </ng-template>
+        <ng-template #imageDownloadCompleted> <img [src]="downloadedImage"  (click)="changeDownloadedImageSize()"/> </ng-template>
    </div>
+  </div>
+  <div *ngIf="!imageDownloadPending && imageFullScreen">
+       <img [src]="downloadedImage" class="image__fullpage" (click)="changeDownloadedImageSize()"/>
   </div>

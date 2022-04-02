@@ -1,3 +1,4 @@
 
 sources/setEnvVars.bat
 sources/.env
+sources/setEvn.bat
